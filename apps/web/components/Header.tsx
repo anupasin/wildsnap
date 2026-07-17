@@ -65,6 +65,10 @@ export function Header() {
                   borderRadius: 999,
                   color: active ? "#ffffff" : "#6b655a",
                   background: active ? "#2f5d45" : "transparent",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  lineHeight: 1.2,
                 }}
               >
                 {tab.label}
