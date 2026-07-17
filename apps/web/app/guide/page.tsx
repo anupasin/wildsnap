@@ -44,7 +44,7 @@ export default function GuidePage() {
       <FieldGuideList entries={entries} onOpen={setOpen} />
 
       {entries.length === 0 ? (
-        <div style={{ textAlign: "center", marginTop: 8 }}>
+        <div style={{ textAlign: "center", marginTop: 8 }} className="guide-empty">
           <Link href="/" style={{ color: "#2f5d45", fontWeight: 700, textDecoration: "none" }}>
             Identify your first find →
           </Link>
