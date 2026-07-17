@@ -1,0 +1,14 @@
+{
+  "name": "wildsnap",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WildSnap — a playful nature identification prototype (catch & collect field guide).",
+  "packageManager": "pnpm@11.13.1",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "start:mobile": "pnpm --filter mobile start",
+    "typecheck": "pnpm -r typecheck",
+    "core:demo": "pnpm --filter @wildsnap/core demo"
+  }
+}

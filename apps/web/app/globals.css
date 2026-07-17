@@ -1,0 +1,26 @@
+:root {
+  --canvas: #f6f1e7;
+  --ink: #26241f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", -apple-system,
+    BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* react-native-web renders each StyleSheet rule; keep default focus rings usable */
+:focus-visible {
+  outline: 2px solid #2f5d45;
+  outline-offset: 2px;
+}

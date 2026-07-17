@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "WildSnap",
+    "slug": "wildsnap",
+    "version": "0.1.0",
+    "scheme": "wildsnap",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#F6F1E7"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "WildSnap uses your camera to identify plants, trees, flowers, birds, and landscapes.",
+        "NSPhotoLibraryUsageDescription": "WildSnap needs access to your photos so you can identify a picture you already took."
+      }
+    },
+    "android": {
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"],
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F1E7"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "WildSnap uses your camera to identify plants, trees, flowers, birds, and landscapes."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "WildSnap needs access to your photos so you can identify a picture you already took."
+        }
+      ]
+    ]
+  }
+}

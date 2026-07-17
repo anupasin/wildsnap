@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# next.js
+.next/
+out/
+
+# expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# build output
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
