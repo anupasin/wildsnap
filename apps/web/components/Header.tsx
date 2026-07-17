@@ -47,7 +47,7 @@ export function Header() {
           <span>🌿</span>
           <span>WildSnap</span>
         </Link>
-        <nav style={{ display: "flex", gap: 6 }}>
+        <nav style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
           {tabs.map((tab) => {
             const active =
               tab.href === "/"
@@ -57,6 +57,7 @@ export function Header() {
               <Link
                 key={tab.href}
                 href={tab.href}
+                className="nav-tab"
                 style={{
                   textDecoration: "none",
                   fontSize: 14,
