@@ -47,3 +47,21 @@ body {
     padding: 7px 12px;
   }
 }
+
+/* Responsive main content padding */
+main {
+  padding: 24px 20px 64px;
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 16px 48px;
+  }
+}
+
+/* Better empty state centering */
+@media (max-width: 480px) {
+  .guide-empty {
+    margin-top: 40px;
+  }
+}
