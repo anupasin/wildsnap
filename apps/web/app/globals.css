@@ -27,7 +27,7 @@ body {
 
 /* Mobile-friendly nav tabs */
 @media (max-width: 480px) {
-  header nav a {
+  .nav-tab {
     font-size: 13px !important;
     padding: 7px 11px !important;
     white-space: nowrap;
@@ -42,7 +42,7 @@ body {
 
 /* Slightly larger screens but still tight */
 @media (max-width: 640px) {
-  header nav a {
+  .nav-tab {
     font-size: 13.5px;
     padding: 7px 12px;
   }
