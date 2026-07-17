@@ -28,6 +28,59 @@ export default function GuidePage() {
     return <p style={{ textAlign: "center", color: "#6b655a" }}>Loading…</p>;
   }
 
+  // When empty, render a fully centered empty state
+  if (entries.length === 0) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "40px 20px",
+          minHeight: "60vh",
+        }}
+      >
+        <h1 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 8px 0" }}>
+          My Field Guide
+        </h1>
+        <p style={{ color: "#6b655a", margin: "0 0 32px 0" }}>
+          Nothing collected yet.
+        </p>
+
+        <div style={{ fontSize: 52, marginBottom: 16 }}>🌱</div>
+        <h2 style={{ fontSize: 22, fontWeight: 800, margin: "0 0 12px 0" }}>
+          Your field guide is empty
+        </h2>
+        <p
+          style={{
+            color: "#6b655a",
+            maxWidth: 360,
+            lineHeight: 1.5,
+            margin: "0 0 28px 0",
+          }}
+        >
+          Point your camera at a plant, flower, tree, bird, or a bit of wild
+          landscape — everything you identify collects here.
+        </p>
+
+        <Link
+          href="/"
+          style={{
+            color: "#2f5d45",
+            fontWeight: 700,
+            textDecoration: "none",
+            fontSize: 16,
+          }}
+        >
+          Identify your first find →
+        </Link>
+      </div>
+    );
+  }
+
+  // Normal state with entries
   return (
     <div>
       <div style={{ marginBottom: 20 }}>
@@ -35,21 +88,11 @@ export default function GuidePage() {
           My Field Guide
         </h1>
         <p style={{ color: "#6b655a", margin: 0 }}>
-          {entries.length === 0
-            ? "Nothing collected yet."
-            : `${entries.length} ${entries.length === 1 ? "find" : "finds"} collected`}
+          {`${entries.length} ${entries.length === 1 ? "find" : "finds"} collected`}
         </p>
       </div>
 
       <FieldGuideList entries={entries} onOpen={setOpen} />
-
-      {entries.length === 0 ? (
-        <div style={{ textAlign: "center", marginTop: 8 }} className="guide-empty">
-          <Link href="/" style={{ color: "#2f5d45", fontWeight: 700, textDecoration: "none" }}>
-            Identify your first find →
-          </Link>
-        </div>
-      ) : null}
 
       {open ? (
         <div style={overlay} onClick={() => setOpen(null)}>
