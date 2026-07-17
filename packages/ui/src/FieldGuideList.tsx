@@ -102,8 +102,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.xl,
     maxWidth: 420,
     alignSelf: "center",
+    width: "100%",
+    textAlign: "center" as const, // for web compatibility
   },
-  emptyEmoji: { fontSize: 44 },
-  emptyTitle: { fontSize: type.title, fontWeight: "800", color: colors.ink },
-  emptyText: { fontSize: type.small, lineHeight: 22, color: colors.inkSoft, textAlign: "center" },
+  emptyEmoji: { fontSize: 52, marginBottom: spacing.md },
+  emptyTitle: { fontSize: type.title, fontWeight: "800", color: colors.ink, textAlign: "center" as const },
+  emptyText: { fontSize: type.small, lineHeight: 22, color: colors.inkSoft, textAlign: "center" as const },
 });
