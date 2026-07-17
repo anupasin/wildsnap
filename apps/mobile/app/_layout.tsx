@@ -17,6 +17,7 @@ export default function RootLayout() {
           tabBarActiveTintColor: colors.forest,
           tabBarInactiveTintColor: colors.inkFaint,
           tabBarStyle: { backgroundColor: colors.surface },
+          tabBarItemStyle: { justifyContent: "center", alignItems: "center" },
           sceneStyle: { backgroundColor: colors.canvas },
         }}
       >
@@ -25,7 +26,9 @@ export default function RootLayout() {
           options={{
             title: "WildSnap",
             tabBarLabel: "Identify",
-            tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>📷</Text>,
+            tabBarIcon: ({ color }) => (
+              <Text style={{ fontSize: 20, lineHeight: 20, color }}>📷</Text>
+            ),
           }}
         />
         <Tabs.Screen
@@ -33,7 +36,9 @@ export default function RootLayout() {
           options={{
             title: "My Field Guide",
             tabBarLabel: "Field Guide",
-            tabBarIcon: ({ color }) => <Text style={{ fontSize: 20, color }}>🌿</Text>,
+            tabBarIcon: ({ color }) => (
+              <Text style={{ fontSize: 20, lineHeight: 20, color }}>🌿</Text>
+            ),
           }}
         />
       </Tabs>
