@@ -70,6 +70,7 @@ export function Header() {
                   alignItems: "center",
                   justifyContent: "center",
                   lineHeight: 1.2,
+                  minWidth: "fit-content",
                 }}
               >
                 {tab.label}
