@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "../components/Header";
+import { SiteBackground } from "../components/SiteBackground";
 
 export const metadata: Metadata = {
   title: "WildSnap — your pocket field guide",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SiteBackground />
         <Header />
         <main
           style={{

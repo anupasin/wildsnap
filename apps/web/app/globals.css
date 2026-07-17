@@ -66,3 +66,48 @@ main {
     margin-top: 60px;
   }
 }
+
+/* Site-wide background illustration ("Hedgerow Horizon") */
+.site-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.site-bg__art {
+  position: absolute;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  animation: site-bg-drift 90s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes site-bg-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.02);
+  }
+  50% {
+    transform: translate3d(-1.4%, -1%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.02);
+  }
+}
+
+.site-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(246, 241, 231, 0.62);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-bg__art {
+    animation: none;
+    transform: scale(1.02);
+  }
+}
